@@ -3,20 +3,28 @@ salvarH1.textContent = "Pacientes Alterados"
 
 //manipulando DOM
 
-let paciente = document.querySelector("#primeiro-paciente")
-let tdpeso = paciente.querySelector(".info-peso");
-let peso = tdpeso.textContent;
+let pacientes = document.querySelectorAll(".paciente");
 
-let tdAltura = paciente.querySelector(".info-altura")
-let altura = tdAltura.textContent;
+for (let i = 0; i < pacientes.length; i++) {
+    
+    let paciente = pacientes[i];
 
+    let tdpeso = paciente.querySelector(".info-peso");
+    let peso = tdpeso.textContent;
 
-let tdImc = paciente.querySelector(".info-imc");
-
-let imcCalc = peso/(altura*altura);
-
-tdImc.textContent = imcCalc;
+    let tdAltura = paciente.querySelector(".info-altura")
+    let altura = tdAltura.textContent;
 
 
+    let tdImc = paciente.querySelector(".info-imc");
 
-console.log(imcCalc);
+    let imcCalc = peso / (altura * altura);
+
+    tdImc.textContent = imcCalc.toFixed(2);
+
+
+
+    
+}
+
+
