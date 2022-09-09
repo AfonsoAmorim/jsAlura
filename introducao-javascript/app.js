@@ -22,6 +22,11 @@ for (let i = 0; i < pacientes.length; i++) {
 
     tdImc.textContent = imcCalc.toFixed(2);
 
+    if(imcCalc > 25){
+        paciente.style.backgroundColor = "red";
+    }else{
+        paciente.classList.add("pacienteBom");
+    }
 
 
     
